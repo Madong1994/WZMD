@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8"/>
+    <title sec:authentication="name"></title>
+    <!--<link rel="stylesheet" th:href="@{css/bootstrap.min.css}"/>-->
+    <link th:href="@{/css/msmart.css}" href="/static/css/msmart.css" rel="stylesheet" />
+    <link th:href="@{/css/materialize/materialize.css}" href="/static/css/materialize/materialize.css" rel="stylesheet" />
+
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">组件</a></li>
+            <li><a href="collapsible.html">JavaScript</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="slider">
+    <ul class="slides">
+        <li>
+            <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+            <div class="caption center-align">
+                <h3>这是一个巨大的标签行</h3>
+                <h5 class="light grey-text text-lighten-3">这是我们的小口号。</h5>
+            </div>
+        </li>
+        <li>
+            <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+            <div class="caption left-align">
+                <h3>左对齐标题</h3>
+                <h5 class="light grey-text text-lighten-3">这是我们的小口号。</h5>
+            </div>
+        </li>
+        <li>
+            <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+            <div class="caption right-align">
+                <h3>右对齐标题</h3>
+                <h5 class="light grey-text text-lighten-3">这是我们的小口号。</h5>
+            </div>
+        </li>
+        <li>
+            <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+            <div class="caption center-align">
+                <h3>这是一个巨大的标签行</h3>
+                <h5 class="light grey-text text-lighten-3">这是我们的小口号。</h5>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<div class="carousel carousel-slider">
+    <a class="carousel-item" href="#one!"><img th:src="@{/image/lorempixel1.jpg}" src="/static/image/nature/lorempixel1.jpg"></a>
+    <a class="carousel-item" href="#two!"><img th:src="@{/image/lorempixel2.jpg}"  src="/static/image/lorempixel2.jpg"></a>
+    <a class="carousel-item" href="#three!"><img th:src="@{/image/lorempixel3.jpg}"  src="/static/image/lorempixel3.jpg"></a>
+    <a class="carousel-item" href="#four!"><img th:src="@{/image/lorempixel4.jpg}"  src="/static/image/lorempixel4.jpg"></a>
+    <a class="carousel-item" href="#five!"><img th:src="@{/image/lorempixel5.jpg}"  src="/static/image/lorempixel5.jpg"></a>
+</div>
+
+<div class="parallax-container">
+    <div class="parallax"><img th:src="@{/image/parallax1.jpg}" src="/static/image/parallax1.jpg"></div>
+</div>
+<div class="section white">
+    <div class="row container">
+        <h2 class="header">Parallax</h2>
+        <p class="grey-text text-darken-3 lighten-3">视差是一种效果，在背景内容或图片在一下情况：相对于前景内容滚动的速度有一个不同的移动速度。</p>
+    </div>
+</div>
+<div class="parallax-container">
+    <div class="parallax"><img th:src="@{/image/parallax2.jpg}" src="/static/image/parallax2.jpg"></div>
+</div>
+</body>
+<script th:src="@{/js/jquery-3.2.1.min.js}" src="/static/js/jquery-3.2.1.min.js"></script>
+<script th:src="@{/js/materialize/materialize.js}" src="/static/js/materialize/materialize.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.carousel').carousel();
+        $('.carousel.carousel-slider').carousel({full_width: true,no_wrap:true});
+        $('.parallax').parallax();
+    });
+</script>
+</html>
